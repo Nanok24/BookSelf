@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <div class="div-center" style="margin-left: 40px; margin-top: 50px">
+    <ion-icon src="./assets/icon/mediumLogo.svg" class="logo-medium"></ion-icon>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="div-center" style="padding-bottom: 30%">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12" class="welcome-text"> Welcome to BookSelf </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="sub-text">
+          Register an account and start scanning your favourite books or find
+          new ones to add to your digital bookshelf.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="div-center"
+          ><ion-button id="reg-button" [routerLink]="['../register']"
+            ><span class="button-text">Register</span></ion-button
+          >
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="div-center"
+          ><ion-button
+            id="login-button"
+            style="margin-top: 10px"
+            [routerLink]="['../login']"
+            ><span class="button-text">Login</span></ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-footer
+  ><div class="footer-text">
+    Proiect Licenta - Ion Mihnea-Andrei - Facultatea de Automatica si
+    Calculatoare - Universitatea Politehnica din Bucuresti
+  </div>
+</ion-footer>

@@ -1,0 +1,92 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: "Lato"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "LatoExtraBold"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "LatoBlackItalic"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-BlackItalic.ttf");
+}
+
+@font-face {
+  font-family: "LatoBold"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: "LatoBoldItalic"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "LatoItalic"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-Italic.ttf");
+}
+
+@font-face {
+  font-family: "LatoLight"; //This is what we are going to call
+  src: url("./assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: "Merriweather-BoldItalic"; //This is what we are going to call
+  src: url("./assets/fonts/Merriweather-BlackItalic.ttf");
+}
+
+.scanner-hide {
+  visibility: visible;
+}
+body.qrscanner {
+  background-color: transparent;
+}
+body.qrscanner .scanner-hide {
+  visibility: hidden;
+}
+
+* {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.modalCss .modal-wrapper {
+  display: block;
+  height: 600px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  content: "";
+}

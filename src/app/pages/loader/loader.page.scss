@@ -1,0 +1,36 @@
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.title-screen {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.title-text {
+  font-family: Merriweather-BoldItalic;
+  font-size: 72px;
+  line-height: 47px;
+  letter-spacing: 0.5625px;
+  text-align: center;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.logo-large {
+  fill: #000000;
+  text-align: center;
+  font-size: 180px;
+}
+ion-spinner {
+  align-items: flex-end;
+  text-align: center;
+  transform: scale(3);
+}
+ion-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

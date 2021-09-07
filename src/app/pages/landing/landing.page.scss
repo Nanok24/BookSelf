@@ -1,0 +1,62 @@
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.logo-medium {
+  fill: #000000;
+  width: 338px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-text {
+  font-family: LatoExtraBold;
+  font-size: 24px;
+  line-height: 47px;
+  letter-spacing: 0.5625px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sub-text {
+  font-family: LatoBoldItalic !important;
+  color: #bebebe;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5625px;
+  text-align: center !important;
+}
+.button-text {
+  font-family: LatoBold;
+  color: rgba(246, 246, 246, 0.8);
+  font-size: 14px;
+  align-self: center;
+  justify-content: center;
+  text-transform: initial;
+}
+.footer-text {
+  font-family: LatoLight;
+  color: #bebebe;
+  font-size: 14px;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#reg-button {
+  --background: rgba(var(--ion-color-success-rgb), 0.7);
+  margin-top: 30px;
+  height: 50px;
+  width: 90%;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --border-radius: 10px;
+}
+#login-button {
+  --background: #2f2f2f;
+  height: 50px;
+  width: 90%;
+  box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --border-radius: 10px;
+}

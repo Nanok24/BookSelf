@@ -1,0 +1,103 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="title-text">Books Review</ion-title>
+    <ion-icon
+      src="./assets/icon/bookLogo.svg"
+      class="logo-large"
+      slot="end"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-align-items-center ion-justify-content-center">
+    <ion-card *ngIf="!reviews.length">
+      <ion-card-content>
+        <ion-item>
+          <ion-label><span>Collection is empty</span></ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-row class="ion-justify-content-center">
+      <!-- tot ce e in ion-col e template-ul pentru afisarea recenziilor -->
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        style="width: 390px"
+        *ngFor="let review of reviews"
+      >
+        <ion-card>
+          <ion-card-header>
+            <div class="ion-float-right ion-no-padding">
+              <ion-button
+                (click)="deleteReview(review.id)"
+                fill="clear"
+                slot="end"
+              >
+                <ion-icon
+                  slot="icon-only"
+                  name="trash-sharp"
+                  style="color: rgba(var(--ion-color-danger-rgb), 0.85)"
+                >
+                </ion-icon>
+              </ion-button>
+            </div>
+            <ion-item lines="none">
+              <ion-label class="card-title ion-text-wrap"
+                >{{review.title}}</ion-label
+              >
+            </ion-item>
+            <ion-card-subtitle>{{review.bookAuthors}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content
+            class="
+              ion-text-center ion-justify-content-between ion-align-items-center
+            "
+          >
+            <div
+              style="width: 100px; height: 250px"
+              class="ion-float-left ion-align-items-center"
+            >
+              <ion-img
+                class="ion-align-items-center"
+                src="{{review.cover}}"
+                style="
+                  width: 100px;
+                  height: 250px;
+                  margin-bottom: 20%;
+                  display: inline-block;
+                "
+              ></ion-img>
+            </div>
+            <ion-list lines="none">
+              <ion-item class="review-text"> {{review.text}} </ion-item>
+              <ion-item>
+                <ion-label> Rating: {{ review.rating }} / 5</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button class="search-list" [routerLink]="['../../book-search']">
+        <ion-icon name="book"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button
+        class="search-list"
+        [routerLink]="['../../review-search']"
+      >
+        <ion-icon name="star"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="search-list" [routerLink]="['../../user-search']">
+        <ion-icon name="person"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

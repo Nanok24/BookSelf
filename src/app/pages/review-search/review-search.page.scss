@@ -1,0 +1,80 @@
+ion-searchbar {
+  --background: #1f1f1f;
+  --border-radius: 20px;
+  width: 100%;
+}
+
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 0px !important;
+}
+
+ion-card {
+  border-radius: 10px;
+  padding: 0 !important;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.card-title {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-family: LatoBoldItalic;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.title-text {
+  font-family: LatoExtraBold;
+  font-size: 24px;
+  letter-spacing: 0.5625px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  padding-right: 30px;
+}
+
+.review-text {
+  font-family: Lato;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #363636;
+  white-space: normal;
+}
+
+ion-card-subtitle {
+  margin-bottom: 0px;
+  font-family: LatoItalic;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+  font-family: LatoBoldItalic;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BookSelf</string>
+    <string name="title_activity_main">BookSelf</string>
+    <string name="package_name">com.nanok.bookself</string>
+    <string name="custom_url_scheme">com.nanok.bookself</string>
+</resources>

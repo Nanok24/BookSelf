@@ -1,0 +1,142 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="div-title" style="margin-left: 40px">
+    <ion-icon src="./assets/icon/mediumLogo.svg" class="logo-medium"></ion-icon>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="div-center" style="padding-bottom: 10%">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12" class="welcome-text"> Create an account </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" style="display: flex; justify-content: center"
+          ><ion-card style="border-radius: 40px; width: 80%">
+            <ion-card-content>
+              <form
+                [formGroup]="ionicForm"
+                (ngSubmit)="submitForm()"
+                novalidate
+              >
+                <div class="item-content">
+                  <ion-item class="input-field">
+                    <ion-icon
+                      name="person-outline"
+                      slot="end"
+                      size="large"
+                      style="color: rgba(255, 255, 255, 0.4)"
+                    ></ion-icon>
+                    <ion-input
+                      placeholder="Display name"
+                      formControlName="displayName"
+                      type="text"
+                      #displayName
+                      required
+                    ></ion-input>
+                  </ion-item>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.displayName.errors?.required"
+                  >
+                    Name is required.
+                  </span>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.displayName.errors?.minlength"
+                  >
+                    Name should be min 3 chars long.
+                  </span>
+                </div>
+                <div class="item-content">
+                  <ion-item class="input-field">
+                    <ion-icon
+                      name="mail-outline"
+                      slot="end"
+                      size="large"
+                      style="color: rgba(255, 255, 255, 0.4)"
+                    ></ion-icon>
+                    <ion-input
+                      placeholder="Email"
+                      formControlName="email"
+                      type="text"
+                      #email
+                      required
+                    ></ion-input>
+                  </ion-item>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.email.errors?.required"
+                  >
+                    Email is required.
+                  </span>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.email.errors?.pattern"
+                  >
+                    Please provide a valid email address.
+                  </span>
+                </div>
+                <div class="item-content">
+                  <ion-item class="input-field">
+                    <ion-icon
+                      src="./assets/icon/lockPassword.svg"
+                      slot="end"
+                      size="large"
+                    ></ion-icon>
+                    <ion-input
+                      placeholder="Password"
+                      formControlName="password"
+                      type="text"
+                      #password
+                      required
+                    ></ion-input>
+                  </ion-item>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.password.errors?.required"
+                  >
+                    Password is required.
+                  </span>
+                  <span
+                    class="error ion-padding-vertical"
+                    *ngIf="isSubmitted && errorControl.password.errors?.minlength"
+                  >
+                    Password should be min 5 chars long.
+                  </span>
+                  <ion-row>
+                    <ion-col size="12" class="div-center" style="padding: 0px"
+                      ><ion-button
+                        id="reg-button"
+                        type="submit"
+                        (click)="signUp(email, password, displayName)"
+                        ><span class="button-text">Create</span></ion-button
+                      ></ion-col
+                    >
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="12" class="div-center" style="padding: 0px"
+                      ><ion-button
+                        id="google-button"
+                        (click)="authService.googleAuth()"
+                      >
+                        <ion-icon name="logo-google" slot="start"></ion-icon>
+                        <span class="button-text"
+                          >Sign up with Google</span
+                        ></ion-button
+                      ></ion-col
+                    >
+                  </ion-row>
+                </div>
+              </form>
+            </ion-card-content>
+          </ion-card></ion-col
+        >
+      </ion-row>
+    </ion-grid>
+  </div></ion-content
+>

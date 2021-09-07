@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-text">Search reviews</ion-title>
+  </ion-toolbar>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        size="12"
+        class="ion-align-items-center ion-justify-content-center"
+      >
+        <ion-searchbar
+          showCancelButton="never"
+          placeholder="Filter by Book Title"
+          [(ngModel)]="searchTerm"
+          animated
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-align-items-center ion-justify-content-center">
+    <ion-row class="ion-justify-content-center">
+      <!-- tot ce e in ion-col e template-ul pentru afisarea recenziilor -->
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        style="width: 390px"
+        *ngFor="let review of reviews| filter: searchTerm"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-label class="card-title ion-text-wrap"
+                >{{review.title}}</ion-label
+              >
+            </ion-item>
+            <ion-card-subtitle>{{review.bookAuthors}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content
+            class="
+              ion-text-center ion-justify-content-between ion-align-items-center
+            "
+          >
+            <div
+              style="width: 100px; height: 250px"
+              class="ion-float-left ion-align-items-center"
+            >
+              <ion-img
+                class="ion-align-items-center"
+                src="{{review.cover}}"
+                style="
+                  width: 100px;
+                  height: 250px;
+                  margin-bottom: 20%;
+                  display: inline-block;
+                "
+              ></ion-img>
+            </div>
+            <ion-list lines="none">
+              <ion-item class="review-text"> {{review.text}} </ion-item>
+              <ion-item>
+                <ion-label> {{review.rating}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

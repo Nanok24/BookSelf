@@ -1,0 +1,76 @@
+.logout-text {
+  font-family: Lato;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.profile-name {
+  font-family: LatoExtraBold;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+
+ion-button {
+  ion-icon {
+    font-size: 30px;
+  }
+}
+
+.card-title {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-family: LatoBoldItalic;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.card-buttons {
+  padding: 0px !important;
+  margin: 0px !important;
+  width: 150px;
+}
+
+.item-background-color {
+  --ion-item-background: transparent;
+}
+
+ion-card {
+  border-radius: 10px;
+  padding: 0 !important;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 100%;
+  ion-list {
+    ion-label {
+      font-family: Lato;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.5625px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #363636;
+      white-space: normal;
+      span {
+        font-family: LatoBold;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    ion-item {
+      margin-left: 15px;
+      border: 0px;
+      border-left: 2px solid rgba(74, 92, 252, 0.7);
+    }
+  }
+}
+
+.search-list {
+  --background: rgba(var(--ion-color-tertiary-rgb), 0.9);
+  width: 50px !important;
+  height: 50px !important;
+}

@@ -1,0 +1,109 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="div-title">
+    <ion-icon src="./assets/icon/mediumLogo.svg" class="logo-medium"></ion-icon>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="div-center" style="padding-bottom: 20%">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12" class="welcome-text"> Welcome back! </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" style="display: flex; justify-content: center"
+          ><ion-card style="border-radius: 40px; width: 80%">
+            <ion-card-content>
+              <div class="item-content">
+                <ion-item
+                  class="input-field"
+                  style="
+                    border-radius: 10px;
+                    --background: #484848;
+                    --highlight-color-focused: #69c699;
+                    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <ion-icon
+                    name="mail-outline"
+                    slot="end"
+                    size="large"
+                    style="color: rgba(255, 255, 255, 0.4)"
+                  ></ion-icon>
+                  <ion-input placeholder="Email" #email required></ion-input>
+                </ion-item>
+              </div>
+              <div class="item-content">
+                <ion-item
+                  class="input-field"
+                  style="
+                    border-radius: 10px;
+                    --background: #484848;
+                    --highlight-color-focused: #69c699;
+                    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                  "
+                >
+                  <ion-icon
+                    src="./assets/icon/lockPassword.svg"
+                    slot="end"
+                    size="large"
+                  ></ion-icon>
+                  <ion-input
+                    placeholder="Password"
+                    type="password"
+                    #password
+                    required
+                  ></ion-input>
+                </ion-item>
+                <ion-row>
+                  <ion-col size="12" class="div-center" style="padding: 0px"
+                    ><ion-button id="reg-button" (click)="logIn(email,password)"
+                      ><span class="button-text">Login</span></ion-button
+                    ></ion-col
+                  >
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12" class="div-center" style="padding: 0px"
+                    ><ion-button
+                      id="google-button"
+                      (click)="authService.testGoogle()"
+                    >
+                      <ion-icon name="logo-google" slot="start"></ion-icon>
+                      <span class="button-text"
+                        >Continue with Google</span
+                      ></ion-button
+                    ></ion-col
+                  >
+                </ion-row>
+                <ion-row>
+                  <ion-col
+                    size="12"
+                    class="ion-text-center button-text"
+                    style="margin-top: 10px"
+                    ><ion-item button (click)="recoverPassword(email)">
+                      <ion-label class="button-text ion-text-center"
+                        ><ion-text
+                          style="
+                            text-decoration: underline;
+                            color: rgba(var(--ion-color-warning-rgb), 0.8);
+                          "
+                        >
+                          <h2 class="ion-text-wrap">Forgot your password?</h2>
+                        </ion-text></ion-label
+                      >
+                    </ion-item>
+                    Complete your email and press the link
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-card-content>
+          </ion-card></ion-col
+        >
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

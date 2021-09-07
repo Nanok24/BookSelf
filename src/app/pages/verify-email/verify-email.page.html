@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="div-title" style="margin-left: 40px">
+    <ion-icon src="./assets/icon/mediumLogo.svg" class="logo-medium"></ion-icon>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="div-center" style="padding-bottom: 30%">
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-items-center">
+        <ion-col size="12" class="welcome-text"> Wait a second! </ion-col>
+
+        <p class="sub-text">
+          Please check your email and click on the link to verify your email
+          address.
+        </p>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8"
+          ><ion-button id="reg-button" (click)="openGmail()"
+            ><ion-icon src="./assets/icon/inboxIcon.svg"></ion-icon
+            ><span class="button-text">Open Gmail App</span></ion-button
+          >
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8"
+          ><ion-button
+            id="reg-button"
+            (click)="authService.sendVerificationEmail()"
+            class="ion-align-self-center"
+            ><ion-icon name="send-sharp"></ion-icon
+            ><span class="button-text"
+              >Resend verification email</span
+            ></ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

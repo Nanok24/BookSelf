@@ -1,0 +1,30 @@
+<ion-tabs>
+  <ion-tab-bar
+    slot="bottom"
+    style="--color-selected: rgba(var(--ion-color-primary-rgb), 0.9)"
+  >
+    <ion-tab-button tab="bookshelf" root>
+      <ion-icon
+        src="../assets/icon/bookshelfIcon.svg"
+        style="width: 32px; height: 29px"
+      ></ion-icon>
+      <ion-label>Bookshelf</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button
+      tab="scanner"
+      style="--color-selected: rgba(var(--ion-color-success-rgb), 0.8)"
+    >
+      <ion-icon name="scan" size="large"></ion-icon>
+      <ion-label>Scanner</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button
+      tab="review"
+      style="--color-selected: rgba(var(--ion-color-warning-rgb), 0.8)"
+    >
+      <ion-icon name="star" size="large"></ion-icon>
+      <ion-label>Reviews</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

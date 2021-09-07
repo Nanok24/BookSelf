@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../assets/icon/profileIcon.svg" />
+      </ion-avatar>
+      <ion-label class="profile-name">{{displayName}}</ion-label>
+    </ion-item>
+    <ion-item button slot="end" (click)="signOut()">
+      <ion-icon
+        name="log-out-outline"
+        style="width: 30px; height: 30px"
+      ></ion-icon>
+      <ion-label style="margin-left: 5px" class="logout-text">Logout</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-align-items-center ion-justify-content-center">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center"
+        ><ion-button
+          (click)="presentModal()"
+          class="ion-justify-content-center add-button"
+        >
+          <ion-icon slot="start" name="add"></ion-icon>
+          Add a bookshelf
+        </ion-button></ion-col
+      >
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-card *ngIf="!booksShelves.length">
+        <ion-card-content>
+          <ion-item>
+            <ion-label><span>Collection is empty</span></ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        style="width: 390px"
+        *ngFor="let bookShelf of booksShelves"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-img
+              class="ion-float-left ion-align-self-center"
+              src="./assets/icon/bookshelfCard.svg"
+              style="width: 100px; height: 200px"
+            ></ion-img>
+            <div class="ion-float-right ion-no-padding">
+              <ion-button
+                (click)="deleteBookshelf(bookShelf.id)"
+                fill="clear"
+                slot="end"
+              >
+                <ion-icon
+                  slot="icon-only"
+                  name="trash-sharp"
+                  style="color: rgba(var(--ion-color-danger-rgb), 0.85)"
+                >
+                </ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-header>
+          <ion-card-content
+            class="
+              ion-text-center
+              ion-justify-content-between
+              ion-align-center-center
+            "
+          >
+            <ion-item lines="none">
+              <ion-label class="card-title ion-text-wrap"
+                >{{bookShelf.name}}</ion-label
+              >
+            </ion-item>
+          </ion-card-content>
+          <div class="ion-justify-content-center">
+            <ion-button
+              [routerLink]="['book-list', bookShelf.id]"
+              fill="solid"
+              class="open-button"
+            >
+              Open
+              <ion-icon name="open-outline" style="margin-left: 5px"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button class="search-list" [routerLink]="['../../book-search']">
+        <ion-icon name="book"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button
+        class="search-list"
+        [routerLink]="['../../review-search']"
+      >
+        <ion-icon name="star"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="search-list" [routerLink]="['../../user-search']">
+        <ion-icon name="person"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

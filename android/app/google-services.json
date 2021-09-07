@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801454611323",
+    "project_id": "bookself-dabc8",
+    "storage_bucket": "bookself-dabc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801454611323:android:48e3dcc39d6a5c2049bbde",
+        "android_client_info": {
+          "package_name": "com.nanok.bookself"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801454611323-9kfqcgj5gp9j999b4q5q39eqju86ofob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn5_bZZpEZHhzI1rCJQpDrO4cQ1d1LRFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801454611323-9kfqcgj5gp9j999b4q5q39eqju86ofob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

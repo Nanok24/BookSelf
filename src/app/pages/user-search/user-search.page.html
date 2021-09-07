@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-text">Search for users</ion-title>
+  </ion-toolbar>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        size="12"
+        class="ion-align-items-center ion-justify-content-center"
+      >
+        <ion-searchbar
+          showCancelButton="never"
+          placeholder="Filter by display name"
+          [ngModel]="searchTerm"
+          (ngModelChange)="changeSearchCriteria($event)"
+          animated
+          [debounce]="500"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-align-items-center ion-justify-content-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        style="width: 390px"
+        *ngFor="let user of filtered"
+      >
+        <ion-card>
+          <ion-card-content
+            class="ion-justify-content-center ion-align-center-center"
+          >
+            <ion-list lines="none" class="ion-text-center">
+              <ion-item class="ion-text-center">
+                <ion-img
+                  class="ion-float-left ion-align-self-center ion-text-center"
+                  src="./assets/icon/userSearchIcon2.svg"
+                ></ion-img>
+                <ion-label class="ion-text-left"
+                  ><span>{{user.displayName}}</span></ion-label
+                >
+                <ion-button
+                  [routerLink]="['user-bookshelves', user.uid]"
+                  fill="clear"
+                  slot="end"
+                >
+                  <ion-icon
+                    slot="icon-only"
+                    name="eye-outline"
+                    style="
+                      color: rgba(var(--ion-color-secondary-rgb), 0.7);
+                      font-size: 30px;
+                    "
+                  >
+                  </ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

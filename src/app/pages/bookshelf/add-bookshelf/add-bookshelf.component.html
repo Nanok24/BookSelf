@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Add a bookshelf</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()" class="button-text">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list
+    style="height: 100%; width: 100%"
+    lines="none"
+    class="ion-align-items-center ion-justify-content-center"
+  >
+    <ion-item>
+      <ion-label class="ion-text-center book-title">Bookshelf Title</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="label-text" style="margin-top: 0px">Name:</ion-label>
+      <ion-input
+        type="text"
+        class="review-text"
+        (ionChange)="changeName($event)"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: rgba(var(--ion-color-success-rgb), 0.7)">
+    <ion-button expand="block" fill="clear" shape="round" (click)="save()">
+      <span class="button-text">Create</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

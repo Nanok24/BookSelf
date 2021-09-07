@@ -1,0 +1,38 @@
+ion-img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+ion-label {
+  padding-left: 15px;
+
+  span {
+    white-space: normal;
+    font-family: LatoBoldItalic;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+ion-card {
+  border-radius: 10px;
+  padding: 0 !important;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+ion-searchbar {
+  --background: #1f1f1f;
+  --border-radius: 20px;
+  width: 100%;
+}
+
+.title-text {
+  font-family: LatoExtraBold;
+  font-size: 24px;
+  letter-spacing: 0.5625px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  padding-right: 30px;
+}

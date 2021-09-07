@@ -1,0 +1,107 @@
+ion-segment {
+  --background: #1f1f1f;
+  ion-segment-button {
+    color: rgba(255, 255, 255, 0.8);
+    white-space: normal;
+    font-family: LatoBold;
+    --color-checked: rgba(var(--ion-color-secondary-rgb), 0.8);
+  }
+}
+
+.bookshelves-card {
+  ion-card {
+    border-radius: 10px;
+    padding: 0 !important;
+    margin-left: 0px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 100%;
+    height: 200px;
+    ion-item {
+      margin-top: 20px;
+    }
+  }
+}
+
+.bookshelf-title {
+  margin-bottom: 0px;
+  font-family: LatoBoldItalic;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.open-button {
+  width: 60%;
+  margin-left: 10px;
+  --background: rgba(var(--ion-color-primary-rgb), 0.7);
+  --border-radius: 15px;
+  font-family: LatoBold;
+  color: rgba(246, 246, 246, 0.9);
+  font-size: 18px;
+  align-self: center;
+  justify-content: center;
+  text-transform: initial;
+}
+
+.reviews-card {
+  ion-card {
+    border-radius: 10px;
+    padding: 0 !important;
+    margin-left: 0px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 100%;
+    ion-card-subtitle {
+      margin-bottom: 0px;
+      font-family: LatoItalic;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.5625px;
+      word-wrap: break-word;
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.review-text {
+  font-family: Lato;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #363636;
+  white-space: normal;
+}
+
+.review-title {
+  margin-bottom: 0px;
+  font-family: LatoBoldItalic;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.5625px;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.profile-name {
+  font-family: LatoExtraBold;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.logout-text {
+  font-family: Lato;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.87);
+}
