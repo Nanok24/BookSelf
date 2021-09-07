@@ -4,6 +4,7 @@
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"server": {
-		"url": "http://192.168.100.135:8100"
+		"url": "https://bookself-dabc8.firebaseapp.com/",
+		"cleartext": true
 	}
 }

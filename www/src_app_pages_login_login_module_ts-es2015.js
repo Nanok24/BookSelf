@@ -109,15 +109,14 @@ let LoginPage = class LoginPage {
         this.authService = authService;
         this.router = router;
     }
-    ngOnInit() {
-    }
+    ngOnInit() { }
     logIn(email, password) {
         this.authService
             .login(email.value, password.value)
             .then((res) => {
             this.authService.isEmailVerified.subscribe((emailVerified) => {
                 if (emailVerified) {
-                    this.router.navigate(['home']);
+                    this.router.navigate(["home"]);
                 }
             });
         })
@@ -128,7 +127,7 @@ let LoginPage = class LoginPage {
     recoverPassword(email) {
         this.authService.passwordRecover(email.value).then((res) => {
             _capacitor_toast__WEBPACK_IMPORTED_MODULE_2__.Toast.show({
-                text: 'Password reset email has been sent, please check your inbox!'
+                text: "Password reset email has been sent, please check your inbox!",
             });
         });
     }
@@ -139,7 +138,7 @@ LoginPage.ctorParameters = () => [
 ];
 LoginPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
-        selector: 'app-login',
+        selector: "app-login",
         template: _C_Licenta_Archive_node_modules_ngtools_webpack_src_loaders_direct_resource_js_login_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_login_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })

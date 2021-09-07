@@ -226,10 +226,10 @@
           value: function ionViewWillEnter() {
             var _this = this;
 
-            var user = JSON.parse(localStorage.getItem('user'));
+            var user = JSON.parse(localStorage.getItem("user"));
 
             if (user) {
-              this.angularFirestore.collection('bookshelfs').snapshotChanges().pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.mergeMap)(function (booksShelves) {
+              this.angularFirestore.collection("bookshelfs").snapshotChanges().pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.mergeMap)(function (booksShelves) {
                 _this.booksShelves = booksShelves.map(function (t) {
                   return Object.assign({
                     id: t.payload.doc.id
@@ -237,7 +237,7 @@
                 }).filter(function (t) {
                   return t.userId === user.uid;
                 });
-                return _this.angularFirestore.collection('books').snapshotChanges();
+                return _this.angularFirestore.collection("books").snapshotChanges();
               })).subscribe(function (books) {
                 var unfilteredBooks = books.map(function (t) {
                   return Object.assign({
@@ -268,7 +268,7 @@
       };
 
       _BookSearchPage = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_7__.Component)({
-        selector: 'app-book-search',
+        selector: "app-book-search",
         template: _C_Licenta_Archive_node_modules_ngtools_webpack_src_loaders_direct_resource_js_book_search_page_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_book_search_page_scss__WEBPACK_IMPORTED_MODULE_1__]
       })], _BookSearchPage);

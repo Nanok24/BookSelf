@@ -114,20 +114,22 @@ let BookSearchPage = class BookSearchPage {
         this.afAuth = afAuth;
         this.angularFirestore = angularFirestore;
     }
-    ngOnInit() {
-    }
+    ngOnInit() { }
     ionViewWillEnter() {
-        const user = JSON.parse(localStorage.getItem('user'));
+        const user = JSON.parse(localStorage.getItem("user"));
         if (user) {
-            this.angularFirestore.collection('bookshelfs').snapshotChanges().pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.mergeMap)((booksShelves) => {
+            this.angularFirestore
+                .collection("bookshelfs")
+                .snapshotChanges()
+                .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.mergeMap)((booksShelves) => {
                 this.booksShelves = booksShelves
                     .map((t) => (Object.assign({ id: t.payload.doc.id }, t.payload.doc.data())))
-                    .filter(t => t.userId === user.uid);
-                return this.angularFirestore.collection('books').snapshotChanges();
-            })).subscribe((books) => {
-                const unfilteredBooks = books
-                    .map((t) => (Object.assign({ id: t.payload.doc.id }, t.payload.doc.data())));
-                this.books = unfilteredBooks.filter(t => this.booksShelves.map(x => x.id).includes(t.bookShelfId));
+                    .filter((t) => t.userId === user.uid);
+                return this.angularFirestore.collection("books").snapshotChanges();
+            }))
+                .subscribe((books) => {
+                const unfilteredBooks = books.map((t) => (Object.assign({ id: t.payload.doc.id }, t.payload.doc.data())));
+                this.books = unfilteredBooks.filter((t) => this.booksShelves.map((x) => x.id).includes(t.bookShelfId));
             });
         }
     }
@@ -139,7 +141,7 @@ BookSearchPage.ctorParameters = () => [
 ];
 BookSearchPage = (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.Component)({
-        selector: 'app-book-search',
+        selector: "app-book-search",
         template: _C_Licenta_Archive_node_modules_ngtools_webpack_src_loaders_direct_resource_js_book_search_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_book_search_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
