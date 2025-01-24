@@ -28,8 +28,10 @@ The book information is fetched from the
 
 ### 1. Creating an account
 
+<p>
 <img src="ReadMeGifs\CreateAccountSlow.gif" alt="Create a new account" width="300"/>
 <img src="ReadMeGifs\LoginAccount.gif" alt="Login with the new account" width="300" hspace="50"/>
+</p>
 
 ### 2. Adding a new bookshelf
 
